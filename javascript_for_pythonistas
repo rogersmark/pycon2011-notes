@@ -1,0 +1,16 @@
+Javascript for People Who Know Python by Ian Bicking
+===============
+
+Details:
+-----------------
+
+You know Python. You should know Javascript. The two aren't so different, but this talk will explain exactly how they are different -- lists, dicts, objects, functions, loops and all the other details of Javascript described in terms of Python.
+
+Arguments, everything is optional. You can pass in extra, or less arguments, javascript doesn't care.
+undefined is diff than null
+undefined is no more magical than null
+undefined is falseish
+No AttributeErrors... NameError instead.
+typeof is slightly magic
+
+talk was really crowded, hard to take notes in. Was cool though
