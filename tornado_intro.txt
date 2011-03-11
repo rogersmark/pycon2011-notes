@@ -1,0 +1,41 @@
+Introduction to Tornado by Gavin M Roy
+===============
+
+Description:
+-----------------
+
+Tornado is an open source version of the scalable, non-blocking web server and tools that power FriendFeed. It is not only a web server but it is a light-weight, use only what you need, web development framework. In this talk we will review the current state of the Tornado project, review the features Tornado provides and give examples of how to implement asynchronous web applications in Tornado.
+
+My Notes:
+-----------------
+
+Tornado scalable and non-blocking web server and micro framework in Python 2.5 and 2.6. 
+
+Small barrier to entry for quickly developing apps.
+3rd Party auth via OpenID, OAuth Mixins.
+LIght weight template system
+Automagical cross-site forgery protection
+WSGI and Google App Engine Support
+
+Clean, well documented code.
+
+What Tornado isn't:
+    * A full stack framework
+    * Based on Twisted
+    * Unmaintained port, Tornado on Twisted
+    * Influenced the Cyclone project
+    * Replacement for a front-end web server
+        * Run behind reverse proxy http server
+
+Tornado vs Twisted:
+    * Tornado doesn't have to be async
+    * Not as many async drivers
+    * Can introduce blocking behaviors
+    * Tornado code is smaller and easy to understand
+    * Less mature than Twisted
+    * Don't need to buy into a development methodology.
+    * Write python, not Twisted.
+
+Tornado.web:
+
+    * Most development focused around this module.
