@@ -1,0 +1,30 @@
+Linguistics of Twitter by Michael Healy
+===============
+
+Details:
+-----------------
+
+Dialectical changes in America are influencing expression online. This talk will discuss a current project which is using the Natural Language Toolkit to develop up to date reference materials to measure and monitor online natural language.
+
+Links:
+-----------------
+
+http://michaeldhealy.com
+http://aschmann.net/AmEng/ -- survey of regional dialects
+
+My Notes:
+-----------------
+
+Regional differences in word choices. A "Coke" in some regions can mean a variety of different drinks, where in other places it's a legit Coca-Cola. In some areas a ballpoint pen in spelled as "pin". 
+
+Where we stand? Is this all just poor English? English doesn't have an authority. Other languages do have such regulations of their languages. As a result, everyone is correct. 
+
+Linguists thought TV would make us all sound the same, like Tom Brokaw.
+
+Biggest change in spoken English since 1750 going on right now, after TV. Called the Northern Cities Vowel Shift.
+
+"that's the way baseball go" -- AAVE
+
+What do you do with that sentence, as nltk might mishandle it. You can correct it but, that doesn't always go as expected. Building a dictionary, too labor intensive. 
+
+Bayesian prediction using a custom corpus is another option. Lots of custom work to be done to make that pan out. Geographic indexing is another potential route, by determining the tweet source location and mapping it to regional dialects.
