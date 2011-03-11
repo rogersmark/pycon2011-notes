@@ -1,0 +1,62 @@
+Statistical Learning for Text Classification with scikit-learn and NLTK by Olivier Grisel
+===============
+
+Details:
+-----------------
+
+The goal of this talk is to give a state-of-the-art overview of machine learning algorithms applied to text classification tasks ranging from language and topic detection in tweets and web pages to sentiment analysis in consumer products reviews.
+
+My Notes:
+-----------------
+
+Applications of text classification:
+
+    * Spam filtering
+    * Language guessing
+    * Sentiment analysis
+    * News feed topic categorization
+    * Pay per click optimal ads placement
+    * Recommendation systems
+
+Supervised Learning Overview:
+
+    * Convert training data to a set of vectors of features
+    * Build a model based on the stat props of features in training set
+        * Naive Bayesian Classifier
+        * Logistic Regression
+        * Support Vector Machines
+    * For each new text document to classify
+        * Extract features
+        * Asked model to predict the most likely outcome
+
+Bags of words:
+
+    * Tokenize document: list of uni-grams
+    * Binary occurrences/counts
+    * Frequencies
+    * TF-IDF (Term frequency-Inverse Document Frequency)
+
+Better features:
+
+    * bi-grams of words:
+        * "New York" (phrases)
+    * n-grams of chars
+    * Combine with:
+        * Binary occurences
+        * Frequencies
+        * TF-IDF
+
+scikit-learn:
+
+    * BSD
+    * numpy / scipy / cython / c++ wrappers
+    * Many implementations
+    * new release every 3 months
+    * Not just for text classification
+
+Common data cleanup ops:
+
+    * Lower case and remove accentuated chars
+    * Extrac only word tokens of at least 2 chars
+        * Using NLTK tokenizer
+
