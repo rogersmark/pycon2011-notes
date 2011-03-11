@@ -1,0 +1,61 @@
+Pluggable Django Patterns by Corey Oordt
+===============
+
+Details:
+-----------------
+
+Pluggable or reusable applications are a key feature of Django, but there is little guidance on writing them well. We'll dig into the different types of Django applications and coding patterns that make writing a reusable application easier. The talk also covers ways to avoid common implementation gotchas.
+
+My Notes:
+-----------------
+
+A "pluggable" app is easily installed. Forking shouldn't be required.
+
+Application Types:
+
+    * Data. Manages specific data, and access to it
+    * Utility. Provide a way of performing a specific function. Template tags and such.
+    * Decorator. Add functionality to another application, possibly without that application being aware.
+
+Situation 1:
+
+    You want to configure your app without modifying its code (e.g. API Keys)
+
+        Configurable Options. Use getattr to check for settings in settings.py, provide default.
+        Put all of your default settings in a dictionary. Uses dict update to override his settings
+
+Situation 2:
+
+    Lots of variations.
+
+        Abstract Models -- GLAMKit.
+
+Situation 3:
+
+    A few, well-known variations (django.contrib.sites)
+
+        Optional field settings.
+
+Situation 4:
+
+    Optionally use another application (django-tagging for example)
+
+        Optional integration. Check to make sure Tagging is in INSTALLED_APPS. If it is, we'll use it.
+
+Situation 5:
+
+    Want to reference different models (Customizable author field)
+
+        Runtime configurable foreign key with get_model.
+
+Utility Apps:
+
+    models.py is required, even if the app just has templatetags or management commands.
+
+Decorator Apps:
+
+    Add new functionality to another application. It's monkey patching to some degree, but can be used for good instead of evil.
+
+        * Lazy Field Insertion. (github.com/washingtontimes)
+        * Lazy Manager Insertion. (django-mptt)
+        
