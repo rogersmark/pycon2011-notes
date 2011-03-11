@@ -1,0 +1,54 @@
+Supporting All Versions of Python All The Time With Tox by Kumar McMillan
+===============
+
+Details:
+-----------------
+
+This talk explains the modern techniques that every module maintainer needs to know in order to support all major versions of Python. You probably already have a massive test suite using a tool like nosetests, py.test, unittest, or a custom runner. Using the tox command line tool, you'll see how to run your tests in Python 2.x, 3.x, Jython, and whatever else in parallel.
+
+Tox Links:
+-----------------
+
+Site: http://codespeak.net/tox
+Slides: http://farmdev.com/talks/tox
+
+My Notes:
+-----------------
+
+Packaging and sharing is human nature.
+
+13560 packages on Pypi. 374 ready for Python 3.
+
+Pythom 2 is deprecated. On the last supported branch. How do we get to Python 3?
+
+Tox lets you develop in tandem for Python 2 and Python 3.
+
+tox lets you automate the process of building out packages:
+
+    * virtualenv per interpreter
+    * installs package
+    * uses pip/easy_install to get requirements
+    * runs tests
+
+Example command::
+    
+    tox -e py26, py32
+
+Example config ini::
+
+    [tox]
+    envlist=py26,py32
+
+    [testenv]
+    deps=nose
+    commands=
+        nosetests []
+
+How to handle both Python 2 and Python 3
+
+    * Use a dual platform setup.py with distribute to run 2to3 on build.
+    * Single source for 2 and 3.
+
+Problem with dual platform setup, have to tell test runner to use the built version rather than the currently being built version.
+
+You can setup test envs to test against stable and trunk. For example with Django you could test against stable, and test your app with the trunk. Could see that being quite useful.s
